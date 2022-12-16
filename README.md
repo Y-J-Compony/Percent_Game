@@ -1,6 +1,6 @@
 # 무궁화 꽃이 피었습니다.
 
-` git clone "" ` <br />
+` git clone "https://github.com/YJH2848/RedRight-GreenRight.git" ` <br />
 ` npm install `
 
 ## 플레이 방법  
