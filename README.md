@@ -1,6 +1,6 @@
  # 🎰 도박 퍼센트 게임 💰
 
-` git clone "https://github.com/YJH2848/RedRight-GreenRight.git" ` <br />
+` git clone "https://github.com/YJH2848/Gambling-Game.git" ` <br />
 ` npm install `
 
 ## 플레이 방법  
