@@ -41,7 +41,7 @@ export const Life = styled.div`
 모달창 css*/
 export const Modal = styled.div`
   position: fixed;
-  bottom: 0;
+  top: 350px;
   width: 100%;
   height: 100%;
   align-items: center;
@@ -80,3 +80,7 @@ export const Home = styled.button``;
 
 export const Button = styled.div``;
 export const Balance = styled.div``;
+
+/*____________________________
+노동 페이지*/
+export const Labor = styled.div``;

@@ -1,13 +1,13 @@
 import { Reset } from "styled-reset";
 import React from "react";
-import Game from "./page/Game";
+import Main from "./page/Main";
 
 export default function App() {
   return (
     <div>
       <React.Fragment>
         <Reset />
-        <Game />
+        <Main />
       </React.Fragment>
     </div>
   );

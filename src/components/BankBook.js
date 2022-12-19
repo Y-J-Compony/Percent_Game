@@ -19,8 +19,13 @@ export default function BankBook({
     setOutMoney(el.target.value);
   };
   const withdrawal = () => {
-    setMoneys(Number(outMoney) + Number(moneys));
-    setBankMoney(Number(bankMoney) - Number(outMoney));
+    console.log(bankMoney, outMoney);
+    if (bankMoney < outMoney) {
+      alert("통장에 있는 돈보다 더 큰 금액입니다.");
+    } else {
+      setMoneys(Number(outMoney) + Number(moneys));
+      setBankMoney(Number(bankMoney) - Number(outMoney));
+    }
   };
   return (
     <S.Modal>
