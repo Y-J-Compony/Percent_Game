@@ -1,11 +1,9 @@
-import Board from "../components/Board";
-import BoardBtn from "../components/BoardBtn";
+import Btn from "../components/Btn";
 
 export default function Game() {
   return (
     <div>
-      <Board />
-      <BoardBtn />
+      <Btn />
     </div>
   );
 }
