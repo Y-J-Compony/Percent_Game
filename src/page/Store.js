@@ -1,4 +1,11 @@
-export default function Store({ moneys, chance, setChance, setMoneys }) {
+export default function Store({
+  moneys,
+  chance,
+  setChance,
+  setMoneys,
+  setOnOff,
+  onOff,
+}) {
   const opportunity = 30000;
   const buy = () => {
     console.log(moneys, opportunity);
@@ -8,6 +15,9 @@ export default function Store({ moneys, chance, setChance, setMoneys }) {
       setMoneys(Number(moneys) - Number(opportunity));
     } else {
       alert("돈이 부족합니다");
+    }
+    if (chance == 0) {
+      setOnOff(false);
     }
   };
   return (

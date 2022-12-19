@@ -21,7 +21,7 @@ export default function Btn() {
     console.log(moneys);
     if (money == 0) {
       alert("통장에서 출금하십시요");
-      window.location.replace("/");
+      window.location.replace("/sectionTwo#sectionTwo");
     } else if (rand == false) {
       if (moneys <= 10000) {
         console.log("돈이 10000원이거나 그보다 작습니다");
@@ -46,27 +46,28 @@ export default function Btn() {
     } else if (rand == true) {
       if (moneys <= 10000) {
         console.log("돈이 10000원이거나 그보다 작습니다");
-        const randomMoney = Math.floor(Math.random() * 12000 + 1);
+        const randomMoney = Math.floor(Math.random() * 8000 + 1);
         setMoneys(moneys + randomMoney);
       } else if (moneys <= 50000) {
         console.log("돈이 5만원이거나 그보다 작습니다");
-        const randomMoney = Math.floor(Math.random() * 60000 + 1);
+        const randomMoney = Math.floor(Math.random() * 45000 + 1);
         setMoneys(moneys + randomMoney);
       } else if (moneys <= 100000) {
-        const randomMoney = Math.floor(Math.random() * 130000 + 1);
+        const randomMoney = Math.floor(Math.random() * 80000 + 1);
         setMoneys(moneys + randomMoney);
       } else if (moneys <= 500000) {
-        const randomMoney = Math.floor(Math.random() * 600000 + 1);
+        const randomMoney = Math.floor(Math.random() * 450000 + 1);
         setMoneys(moneys + randomMoney);
       } else {
-        const randomMoney = Math.floor(Math.random() * 8000000 + 1);
+        const randomMoney = Math.floor(Math.random() * 800000 + 1);
         setMoneys(moneys + randomMoney);
       }
 
       setChance(chance - 1);
     }
     if (chance == 1) {
-      setOnOff(!onOff);
+      console.log(chance);
+      setOnOff(true);
     }
   };
 
@@ -93,6 +94,8 @@ export default function Btn() {
             chance={chance}
             setChance={setChance}
             setMoneys={setMoneys}
+            setOnOff={setOnOff}
+            onOff={onOff}
           />
         )}
         {page ? null : (
