@@ -39,36 +39,44 @@ export const Life = styled.div`
 
 /*_____________________________________________
 모달창 css*/
-export const Bank = styled.div`
+export const Modal = styled.div`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
+  animation: fadeInUp 1s;
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0.5;
+      transform: translate3d(0, 50%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+`;
+
+export const Bank = styled.div`
+  background-color: lightgray;
+  width: 30vw;
+  height: 80vh;
+  border-radius: 50px;
+  border: 2px solid black;
 `;
 
 export const BankBook = styled.div`
-  background: gray;
-  width: 40vw;
-  height: 90vh;
-`;
-
-export const Home = styled.button`
-  width: 10vw;
-  height: 5vh;
-`;
-
-export const Button = styled.div`
-  height: 75vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-`;
-export const Balance = styled.div`
-  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.2vh solid black;
-  color: white;
+  height: 100%;
+  flex-direction: column;
 `;
+
+export const Home = styled.button``;
+
+export const Button = styled.div``;
+export const Balance = styled.div``;

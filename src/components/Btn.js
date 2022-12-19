@@ -3,44 +3,54 @@ import Bank from "./BankBook";
 import * as S from "../style/style";
 
 export default function Btn() {
-  const [point, setPoint] = useState(1000000);
+  const [bankMoney, setBankMoney] = useState(1000000);
+  const [moneys, setMoneys] = useState(0);
   const [page, setPage] = useState(true);
-  const money = point.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  const [outMoney, setOutMoney] = useState(0);
+
+  const money = moneys.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   const Btn1 = () => {
     const rand = Boolean(Math.round(Math.random()));
-
-    if (rand == false) {
+    if (money == 0) {
+      alert("통장에서 출금하십시요");
+      window.location.replace("/");
+    } else if (rand == false) {
       const randomMoney = Math.floor(Math.random() * 900000 + 1);
-      setPoint(point - randomMoney);
+      setMoneys(moneys - randomMoney);
     } else if (rand == true) {
       const randomMoney = Math.floor(Math.random() * 500000 + 1);
-      setPoint(point + randomMoney);
-    }
-    if (point <= 0) {
-      alert("대출을 받으시겠습니까?");
+      setMoneys(moneys + randomMoney);
     }
   };
+
   const BankBook = () => {
     setPage(!page);
   };
-  const Reset = () => {
-    window.location.reload();
-  };
+
   return (
     <div>
-      {page ? (
-        <S.Board>
-          <S.Life>인생역전</S.Life>
-          <S.MoneyBox>
-            <S.Money>Your money : {money}₩</S.Money>
-          </S.MoneyBox>
+      <S.Board>
+        <S.Life>인생역전</S.Life>
+        <S.MoneyBox>
+          <S.Money>Your money : {money}₩</S.Money>
+        </S.MoneyBox>
+        <p>버튼 누를수 있는 기회 : </p>
+        <button onClick={Btn1}>Btn1</button>
+        <button onClick={BankBook}>통장 잔고 보기</button>
 
-          <button onClick={Btn1}>Btn1</button>
-          <button onClick={BankBook}>통장 잔고 보기</button>
-        </S.Board>
-      ) : (
-        <Bank page={page} setPage={setPage} />
-      )}
+        {page ? null : (
+          <Bank
+            page={page}
+            setPage={setPage}
+            bankMoney={bankMoney}
+            outMoney={outMoney}
+            setOutMoney={setOutMoney}
+            moneys={moneys}
+            setMoneys={setMoneys}
+            setBankMoney={setBankMoney}
+          />
+        )}
+      </S.Board>
     </div>
   );
 }
