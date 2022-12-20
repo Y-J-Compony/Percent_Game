@@ -84,3 +84,5 @@ export const Balance = styled.div``;
 /*____________________________
 노동 페이지*/
 export const Labor = styled.div``;
+
+export const Position = styled.button``;

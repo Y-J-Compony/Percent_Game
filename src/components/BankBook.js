@@ -19,12 +19,16 @@ export default function BankBook({
     setOutMoney(el.target.value);
   };
   const withdrawal = () => {
-    console.log(bankMoney, outMoney);
-    if (bankMoney < outMoney) {
-      alert("통장에 있는 돈보다 더 큰 금액입니다.");
+    if (outMoney >= 0) {
+      console.log(bankMoney, outMoney);
+      if (bankMoney < outMoney) {
+        alert("통장에 있는 돈보다 더 큰 금액입니다.");
+      } else {
+        setMoneys(Number(outMoney) + Number(moneys));
+        setBankMoney(Number(bankMoney) - Number(outMoney));
+      }
     } else {
-      setMoneys(Number(outMoney) + Number(moneys));
-      setBankMoney(Number(bankMoney) - Number(outMoney));
+      alert("오류가 발생하였습니다");
     }
   };
   return (

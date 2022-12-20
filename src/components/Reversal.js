@@ -2,6 +2,7 @@ import { useState } from "react";
 import Bank from "./BankBook";
 import * as S from "../style/style";
 import Store from "../page/Store";
+import { number } from "prop-types";
 
 export default function Btn() {
   const [bankMoney, setBankMoney] = useState(1000000);
@@ -11,6 +12,8 @@ export default function Btn() {
   const [outMoney, setOutMoney] = useState(0);
   const [chance, setChance] = useState(3);
   const [onOff, setOnOff] = useState(false);
+  const [inMoney, setInMoney] = useState(0);
+  const [identity, setIdentity] = useState("");
 
   const goStore = () => {
     setStore(!store);
@@ -27,15 +30,20 @@ export default function Btn() {
         console.log("돈이 10000원이거나 그보다 작습니다");
         const randomMoney = Math.floor(Math.random() * 9000 + 1);
         setMoneys(moneys - randomMoney);
+      } else if (moneys <= 30000) {
+        const randomMoney = Math.floor(Math.random() * 35000 + 1);
+        setMoneys(moneys - randomMoney);
       } else if (moneys <= 50000) {
-        console.log("돈이 5만원이거나 그보다 작습니다");
-        const randomMoney = Math.floor(Math.random() * 55000 + 1);
+        const randomMoney = Math.floor(Math.random() * 60000 + 1);
         setMoneys(moneys - randomMoney);
       } else if (moneys <= 100000) {
-        const randomMoney = Math.floor(Math.random() * 120000 + 1);
+        const randomMoney = Math.floor(Math.random() * 110000 + 1);
+        setMoneys(moneys - randomMoney);
+      } else if (moneys <= 150000) {
+        const randomMoney = Math.floor(Math.random() * 130000 + 1);
         setMoneys(moneys - randomMoney);
       } else if (moneys <= 500000) {
-        const randomMoney = Math.floor(Math.random() * 550000 + 1);
+        const randomMoney = Math.floor(Math.random() * 400000 + 1);
         setMoneys(moneys - randomMoney);
       } else {
         const randomMoney = Math.floor(Math.random() * 1000000 + 1);
@@ -74,11 +82,29 @@ export default function Btn() {
   const BankBook = () => {
     setPage(!page);
   };
+  const Deposit = () => {
+    if (inMoney >= 0) {
+      console.log(moneys - inMoney);
+      if (moneys < inMoney) {
+        alert("돈이 부족합니다.");
+      } else {
+        setMoneys(moneys - inMoney); //inmoney를 통장에 +
+        setBankMoney(Number(bankMoney) + Number(inMoney));
+      }
+    } else {
+      alert("돈 없어");
+    }
+  };
+
+  const onChange = el => {
+    setInMoney(el.target.value);
+  };
 
   return (
     <div>
       <S.Board>
         <S.Life>인생역전</S.Life>
+
         <S.MoneyBox>
           <S.Money>Your money : {money}₩</S.Money>
         </S.MoneyBox>
@@ -87,6 +113,12 @@ export default function Btn() {
           Btn1
         </button>
         <button onClick={BankBook}>통장 잔고 보기</button>
+
+        <button onClick={Deposit}>입금하기</button>
+        <input
+          placeholder="입금하고 싶은 금액을 적으세요"
+          onChange={onChange}
+        ></input>
         <button onClick={goStore}>상점</button>
         {store ? null : (
           <Store
