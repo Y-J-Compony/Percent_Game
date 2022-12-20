@@ -1,7 +1,8 @@
  # 🎰 도박 퍼센트 게임 💰
 
 ` git clone "https://github.com/YJH2848/Gambling-Game.git" ` <br />
-` npm install `
+` npm install ` <br />
+나중에 Redux사용해서 코드 조금 깔쌈하게 짤겁니다
 
 ## 플레이 방법  
 1. 플레이어는 통장에 100만원을 가지고 시작을한다. 
