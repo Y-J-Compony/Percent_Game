@@ -6,7 +6,7 @@ import { number } from "prop-types";
 
 export default function Btn() {
   const [bankMoney, setBankMoney] = useState(1000000);
-  const [moneys, setMoneys] = useState(0);
+  const [moneys, setMoneys] = useState(100000);
   const [page, setPage] = useState(true);
   const [store, setStore] = useState(true);
   const [outMoney, setOutMoney] = useState(0);
@@ -25,53 +25,21 @@ export default function Btn() {
     if (money == 0) {
       alert("통장에서 출금하십시요");
       window.location.replace("/sectionTwo#sectionTwo");
+    }
+    // else if (rand == false) {
+    //   const randomMoney = Math.floor(Math.random() * 9000 + 1);
+    //   setMoneys(moneys - randomMoney);
+
+    //   setChance(chance - 1);
+    // } else if (rand == true) {
+    //   const randomMoney = Math.floor(Math.random() * 8000 + 1);
+    //   setMoneys(moneys + randomMoney);
+    //   setChance(chance - 1);
+    // }
+    else if (rand == true) {
+      setMoneys(moneys * 2);
     } else if (rand == false) {
-      if (moneys <= 10000) {
-        console.log("돈이 10000원이거나 그보다 작습니다");
-        const randomMoney = Math.floor(Math.random() * 9000 + 1);
-        setMoneys(moneys - randomMoney);
-      } else if (moneys <= 30000) {
-        const randomMoney = Math.floor(Math.random() * 35000 + 1);
-        setMoneys(moneys - randomMoney);
-      } else if (moneys <= 50000) {
-        const randomMoney = Math.floor(Math.random() * 60000 + 1);
-        setMoneys(moneys - randomMoney);
-      } else if (moneys <= 100000) {
-        const randomMoney = Math.floor(Math.random() * 110000 + 1);
-        setMoneys(moneys - randomMoney);
-      } else if (moneys <= 150000) {
-        const randomMoney = Math.floor(Math.random() * 130000 + 1);
-        setMoneys(moneys - randomMoney);
-      } else if (moneys <= 500000) {
-        const randomMoney = Math.floor(Math.random() * 400000 + 1);
-        setMoneys(moneys - randomMoney);
-      } else {
-        const randomMoney = Math.floor(Math.random() * 1000000 + 1);
-        setMoneys(moneys - randomMoney);
-      }
-
-      setChance(chance - 1);
-    } else if (rand == true) {
-      if (moneys <= 10000) {
-        console.log("돈이 10000원이거나 그보다 작습니다");
-        const randomMoney = Math.floor(Math.random() * 8000 + 1);
-        setMoneys(moneys + randomMoney);
-      } else if (moneys <= 50000) {
-        console.log("돈이 5만원이거나 그보다 작습니다");
-        const randomMoney = Math.floor(Math.random() * 45000 + 1);
-        setMoneys(moneys + randomMoney);
-      } else if (moneys <= 100000) {
-        const randomMoney = Math.floor(Math.random() * 80000 + 1);
-        setMoneys(moneys + randomMoney);
-      } else if (moneys <= 500000) {
-        const randomMoney = Math.floor(Math.random() * 450000 + 1);
-        setMoneys(moneys + randomMoney);
-      } else {
-        const randomMoney = Math.floor(Math.random() * 800000 + 1);
-        setMoneys(moneys + randomMoney);
-      }
-
-      setChance(chance - 1);
+      setMoneys(0);
     }
     if (chance == 1) {
       console.log(chance);
@@ -124,10 +92,10 @@ export default function Btn() {
           <Store
             moneys={moneys}
             chance={chance}
+            onOff={onOff}
             setChance={setChance}
             setMoneys={setMoneys}
             setOnOff={setOnOff}
-            onOff={onOff}
           />
         )}
         {page ? null : (

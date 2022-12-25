@@ -41,16 +41,27 @@ export const Life = styled.div`
 모달창 css*/
 export const Modal = styled.div`
   position: fixed;
-  top: 350px;
-  width: 100%;
-  height: 100%;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+`;
+
+export const Bank = styled.div`
+  background-color: lightgray;
+  width: 30vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid gray;
   animation: fadeInUp 1s;
   @keyframes fadeInUp {
     0% {
-      opacity: 0.5;
+      opacity: 0;
       transform: translate3d(0, 50%, 0);
     }
     to {
@@ -60,19 +71,11 @@ export const Modal = styled.div`
   }
 `;
 
-export const Bank = styled.div`
-  background-color: lightgray;
-  width: 30vw;
-  height: 80vh;
-  border-radius: 50px;
-  border: 2px solid black;
-`;
-
 export const BankBook = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
 `;
 
