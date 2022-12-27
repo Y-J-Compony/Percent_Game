@@ -1,4 +1,4 @@
-import Btn from "../components/Reversal";
+import Btn from "./Reversal";
 
 export default function Reversal_Life() {
   return (

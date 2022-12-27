@@ -1,4 +1,4 @@
-import Reversal_Life from "./Reversal _Life";
+import Reversal_Life from "../components/Reversal _Life";
 
 export default function Main() {
   return (

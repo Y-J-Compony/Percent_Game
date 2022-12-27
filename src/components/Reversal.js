@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Bank from "./BankBook";
 import * as S from "../style/style";
-import Store from "../page/Store";
+import Store from "./Store";
 
 export default function Btn() {
   const [bankMoney, setBankMoney] = useState(1000000);
@@ -13,6 +13,7 @@ export default function Btn() {
   const [onOff, setOnOff] = useState(false);
   const [inMoney, setInMoney] = useState(0);
   const [persen, setPersen] = useState(1);
+  const [double, setDouble] = useState(1.5);
 
   const goStore = () => {
     setStore(!store);
@@ -26,11 +27,13 @@ export default function Btn() {
       alert("통장에서 출금하십시요");
       window.location.replace("/sectionTwo#sectionTwo");
     } else if (Math.random() < persen) {
-      setMoneys(moneys * 2);
+      setMoneys(moneys * double);
+      setDouble(double + 0.5);
 
       setPersen(persen - 0.25);
-      if (persen == 0.25) {
-        setPersen(persen - 0);
+      if (persen <= 0.25) {
+        setPersen(persen - 0.05);
+        setDouble(double + 1);
       }
       setChance(chance - 1);
     } else {
@@ -38,11 +41,6 @@ export default function Btn() {
       setChance(chance - 1);
     }
 
-    // else if (Math.random() < { persen }) {
-    //   setMoneys(moneys * 2);
-    // } else if (rand == false) {
-    //   setMoneys(0);
-    // }
     if (chance == 1) {
       console.log(chance);
       setOnOff(true);
@@ -69,12 +67,13 @@ export default function Btn() {
   const onChange = el => {
     setInMoney(el.target.value);
   };
-
+  const seePersen = Math.floor(persen * 100);
   return (
     <div>
       <S.Board>
         <S.Life>인생역전</S.Life>
-        <h1>확률 : {persen * 100}</h1>
+        <h1>확률 : {seePersen}%</h1>
+        <h1>{double}배</h1>
         <S.MoneyBox>
           <S.Money>Your money : {money}₩</S.Money>
         </S.MoneyBox>
@@ -98,6 +97,8 @@ export default function Btn() {
             setChance={setChance}
             setMoneys={setMoneys}
             setOnOff={setOnOff}
+            persen={persen}
+            setPersen={setPersen}
           />
         )}
         {page ? null : (
