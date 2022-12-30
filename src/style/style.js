@@ -84,8 +84,7 @@ export const Home = styled.button``;
 export const Button = styled.div``;
 export const Balance = styled.div``;
 
-/*____________________________
-노동 페이지*/
-export const Labor = styled.div``;
-
-export const Position = styled.button``;
+export const Body = styled.body`
+  background-color: lightgreen;
+  height: 100vh;
+`;

@@ -1,9 +1,9 @@
 import Reversal_Life from "../components/Reversal _Life";
-
+import * as S from "../style/style";
 export default function Main() {
   return (
-    <div>
+    <S.Body>
       <Reversal_Life />
-    </div>
+    </S.Body>
   );
 }

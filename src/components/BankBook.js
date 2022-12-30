@@ -30,6 +30,11 @@ export default function BankBook({
       alert("오류가 발생하였습니다");
     }
   };
+
+  const everyMoney = () => {
+    setBankMoney(bankMoney - bankMoney);
+    setMoneys(moneys + bankMoney);
+  };
   return (
     <S.Modal>
       <S.Bank>
@@ -37,6 +42,7 @@ export default function BankBook({
           <S.Balance>통잔잔고 : {money}₩</S.Balance>
           <input placeholder="출금 금액 입력 " onChange={onChange}></input>
           <button onClick={withdrawal}>출금하기</button>
+          <button onClick={everyMoney}>모든 돈 다 출금하기</button>
           <S.Button>
             <S.Home onClick={goToHome}>홈으로</S.Home>
           </S.Button>
