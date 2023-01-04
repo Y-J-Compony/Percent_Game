@@ -4,6 +4,9 @@
 ` npm install ` <br />
 나중에 Redux사용하여 지저분한 props 전달을 깔끔하게 만들것이다
 
+### 디자이너 : 이민석(https://github.com/MinSeok0123)
+### 기능구현 : 윤종혁(https://github.com/YJH2848)
+
 ## 플레이 방법  
 (--생각중--)
 
