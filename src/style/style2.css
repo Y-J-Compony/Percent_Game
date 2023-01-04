@@ -173,16 +173,13 @@
   color: white;
   font-family: "Do Hyeon", sans-serif;
   font-size: 2rem;
-  position: absolute;
-  top: 8vw;
 }
 
 .모달인풋 {
   display: flex;
   justify-content: space-around;
-  width: 88%;
-  position: absolute;
-  top: 17vw;
+  width: 100%;
+  margin-top: 5vw;
 }
 
 .모달출금 {
@@ -222,8 +219,7 @@
   color: white;
   font-family: "Do Hyeon", sans-serif;
   font-size: 1.5rem;
-  position: absolute;
-  top: 25vw;
+  margin-top: 5vw;
 }
 
 .홈으로 {
