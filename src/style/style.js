@@ -53,19 +53,21 @@ export const Modal = styled.div`
 `;
 
 export const Bank = styled.div`
-  background-color: lightgray;
-  width: 30vw;
-  height: 85vh;
+  box-shadow: 5px 10px 10px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background-color: white;
+  width: 35vw;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  border: 2px solid gray;
+  border-radius: 10px;
   animation: fadeInUp 1s;
   @keyframes fadeInUp {
     0% {
       opacity: 0;
-      transform: translate3d(0, 50%, 0);
+      transform: scale(0.9);
     }
     to {
       opacity: 1;

@@ -18,7 +18,7 @@
 .확률 {
   font-family: "Do Hyeon", sans-serif;
   font-size: 1rem;
-  background-color: #91d8e4;
+  background-color: #181d31;
   color: white;
   width: 50%;
   height: 5vh;
@@ -29,10 +29,14 @@
   border-radius: 10px 0px 0px 0px;
 }
 
+.line {
+  border: solid 1px white;
+}
+
 .배율 {
   font-family: "Do Hyeon", sans-serif;
   font-size: 1rem;
-  background-color: #91d8e4;
+  background-color: #181d31;
   color: white;
   width: 50%;
   height: 5vh;
@@ -130,7 +134,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #FFC93C;
+  background-color: #ffc93c;
   cursor: pointer;
   width: 29.5vw;
   height: 6vh;
@@ -138,4 +142,103 @@
   color: white;
   font-family: "Do Hyeon", sans-serif;
   font-size: 1.2rem;
+}
+
+.top {
+  position: absolute;
+  width: 100%;
+  height: 8vh;
+  background-color: #0081c9;
+  top: 0;
+  bottom: 8vw;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 2rem;
+}
+
+.모달통장잔고 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #0081c9;
+  width: 30vw;
+  height: 10vh;
+  border-radius: 5px;
+  color: white;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 2rem;
+  position: absolute;
+  top: 8vw;
+}
+
+.모달인풋 {
+  display: flex;
+  justify-content: space-around;
+  width: 88%;
+  position: absolute;
+  top: 17vw;
+}
+
+.모달출금 {
+  width: 20vw;
+  height: 7vh;
+  font-size: 1.5rem;
+  text-align: center;
+  border: solid rgb(200, 200, 200);
+  border-radius: 5px;
+}
+
+.출금하기 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffc93c;
+  cursor: pointer;
+  width: 9vw;
+  height: 7.5vh;
+  border-radius: 5px;
+  color: white;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 1.2rem;
+}
+
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #eb455f;
+  cursor: pointer;
+  width: 30vw;
+  height: 7.5vh;
+  border-radius: 5px;
+  color: white;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 25vw;
+}
+
+.홈으로 {
+  position: absolute;
+  width: 100%;
+  height: 8vh;
+  background-color: #0081c9;
+  bottom: 0;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
 }

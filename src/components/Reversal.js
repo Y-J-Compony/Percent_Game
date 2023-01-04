@@ -65,17 +65,18 @@ export default function Btn() {
     }
   };
 
-  const onChange = el => {
+  const onChange = (el) => {
     setInMoney(el.target.value);
   };
   const seePersen = Math.floor(persen * 100);
   return (
     <div>
       <S.Board>
-        <S.Life>인생나락</S.Life>
+        <S.Life>종혁이의 도박장</S.Life>
         <div className="확율박스">
           <div className="확율space">
             <span className="확률">확률 : {seePersen}%</span>
+            <div className="line"></div>
             <span className="배율">{double}배</span>
           </div>
         </div>

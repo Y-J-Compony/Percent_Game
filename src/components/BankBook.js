@@ -1,5 +1,6 @@
 import * as S from "../style/style";
 import Bg from "./bg";
+import "../style/style2.css";
 
 export default function BankBook({
   page,
@@ -15,7 +16,7 @@ export default function BankBook({
   const goToHome = () => {
     setPage(!page);
   };
-  const onChange = el => {
+  const onChange = (el) => {
     setOutMoney(el.target.value);
   };
   const withdrawal = () => {
@@ -42,13 +43,24 @@ export default function BankBook({
       <S.Modal>
         <S.Bank>
           <S.BankBook>
-            <S.Balance>통잔잔고 : {money}₩</S.Balance>
-            <input placeholder="출금 금액 입력 " onChange={onChange}></input>
-            <button onClick={withdrawal}>출금하기</button>
-            <button onClick={everyMoney}>모든 돈 다 출금하기</button>
-            <S.Button>
-              <S.Home onClick={goToHome}>홈으로</S.Home>
-            </S.Button>
+            <div className="top">통장 잔고 보기</div>
+            <span className="모달통장잔고">통잔잔고 : {money}₩</span>
+            <div className="모달인풋">
+              <input
+                className="모달출금"
+                placeholder="출금 금액 입력 "
+                onChange={onChange}
+              ></input>
+              <div className="출금하기" onClick={withdrawal}>
+                출금하기
+              </div>
+            </div>
+            <div className="all" onClick={everyMoney}>
+              모든 돈 다 출금하기
+            </div>
+            <div className="홈으로" onClick={goToHome}>
+              창 닫기
+            </div>
           </S.BankBook>
         </S.Bank>
       </S.Modal>
