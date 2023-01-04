@@ -5,23 +5,23 @@ export const Board = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 100vh;
   flex-direction: column;
 `;
 
 export const Money = styled.div`
   color: white;
   font-size: 1.5rem;
+  font-family: "Do Hyeon", sans-serif;
 `;
 
 export const MoneyBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: green;
+  background: #82aae3;
   width: 30vw;
   height: 20vh;
-  margin-bottom: 5vh;
 `;
 
 export const Container = styled.div`
@@ -30,11 +30,13 @@ export const Container = styled.div`
 
 export const Life = styled.div`
   display: flex;
+  height: 15vh;
   align-items: center;
-  height: 30vh;
   justify-content: center;
   font-size: 3rem;
   font-weight: bolder;
+  font-family: "Do Hyeon", sans-serif;
+  color: #82aae3;
 `;
 
 /*_____________________________________________
@@ -85,6 +87,6 @@ export const Button = styled.div``;
 export const Balance = styled.div``;
 
 export const Body = styled.body`
-  background-color: lightgreen;
+  background-color: #eafdfc;
   height: 100vh;
 `;

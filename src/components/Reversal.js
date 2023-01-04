@@ -2,6 +2,7 @@ import { useState } from "react";
 import Bank from "./BankBook";
 import * as S from "../style/style";
 import Store from "./Store";
+import "../style/style2.css";
 
 export default function Btn() {
   const [bankMoney, setBankMoney] = useState(1000000);
@@ -64,7 +65,7 @@ export default function Btn() {
     }
   };
 
-  const onChange = el => {
+  const onChange = (el) => {
     setInMoney(el.target.value);
   };
   const seePersen = Math.floor(persen * 100);
@@ -72,16 +73,24 @@ export default function Btn() {
     <div>
       <S.Board>
         <S.Life>인생역전</S.Life>
-        <h1>확률 : {seePersen}%</h1>
-        <h1>{double}배</h1>
+        <div className="확율박스">
+          <div className="확율space">
+            <span className="확률">확률 : {seePersen}%</span>
+            <span className="배율">{double}배</span>
+          </div>
+        </div>
         <S.MoneyBox>
           <S.Money>Your money : {money}₩</S.Money>
         </S.MoneyBox>
-        <p>버튼 누를수 있는 기회 : {chance}</p>
-        <button onClick={Btn1} disabled={onOff}>
-          Btn1
-        </button>
-        <button onClick={BankBook}>통장 잔고 보기</button>
+        <span className="chance">버튼 누를수 있는 기회 : {chance}</span>
+        <div className="버튼센터">
+          <div className="통장잔고" onClick={BankBook}>
+            통장 잔고 보기
+          </div>
+          <div className="button" onClick={Btn1} disabled={onOff}>
+            버튼
+          </div>
+        </div>
 
         <button onClick={Deposit}>입금하기</button>
         <input
