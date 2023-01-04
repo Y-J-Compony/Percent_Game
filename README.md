@@ -10,5 +10,5 @@
 ## 플레이 방법  
 (--생각중--)
 
-## 배포 사이트 : https://gambling-game.vercel.app/
-(현재 제작 중(디자이너 어디 없나..))
+## 배포 사이트 : https://percent-game.vercel.app/
+
