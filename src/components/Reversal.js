@@ -114,6 +114,8 @@ export default function Btn() {
             setOnOff={setOnOff}
             persen={persen}
             setPersen={setPersen}
+            setStore={setStore}
+            store={store}
           />
         )}
         {page ? null : (

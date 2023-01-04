@@ -1,4 +1,5 @@
 import * as S from "../style/style";
+import Bg from "./bg";
 
 export default function BankBook({
   page,
@@ -36,18 +37,21 @@ export default function BankBook({
     setMoneys(moneys + bankMoney);
   };
   return (
-    <S.Modal>
-      <S.Bank>
-        <S.BankBook>
-          <S.Balance>통잔잔고 : {money}₩</S.Balance>
-          <input placeholder="출금 금액 입력 " onChange={onChange}></input>
-          <button onClick={withdrawal}>출금하기</button>
-          <button onClick={everyMoney}>모든 돈 다 출금하기</button>
-          <S.Button>
-            <S.Home onClick={goToHome}>홈으로</S.Home>
-          </S.Button>
-        </S.BankBook>
-      </S.Bank>
-    </S.Modal>
+    <>
+      <Bg />
+      <S.Modal>
+        <S.Bank>
+          <S.BankBook>
+            <S.Balance>통잔잔고 : {money}₩</S.Balance>
+            <input placeholder="출금 금액 입력 " onChange={onChange}></input>
+            <button onClick={withdrawal}>출금하기</button>
+            <button onClick={everyMoney}>모든 돈 다 출금하기</button>
+            <S.Button>
+              <S.Home onClick={goToHome}>홈으로</S.Home>
+            </S.Button>
+          </S.BankBook>
+        </S.Bank>
+      </S.Modal>
+    </>
   );
 }

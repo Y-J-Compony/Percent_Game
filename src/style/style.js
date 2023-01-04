@@ -91,3 +91,30 @@ export const Body = styled.body`
   background-color: #eafdfc;
   height: 100vh;
 `;
+
+export const Content = styled.div`
+  background-color: lightgray;
+  width: 30vw;
+  height: 85vh;
+  border: 2px solid black;
+  animation: fadeInUp 1s;
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+`;
+
+export const Bg = styled.div`
+  background-color: lightgray;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+`;
