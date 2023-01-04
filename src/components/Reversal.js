@@ -91,13 +91,19 @@ export default function Btn() {
             버튼
           </div>
         </div>
-
-        <button onClick={Deposit}>입금하기</button>
-        <input
-          placeholder="입금하고 싶은 금액을 적으세요"
-          onChange={onChange}
-        ></input>
-        <button onClick={goStore}>상점</button>
+        <div className="입금박스">
+          <input
+            className="input"
+            placeholder="입금하고 싶은 금액을 입력해주세요"
+            onChange={onChange}
+          ></input>
+          <div className="입금하기" onClick={Deposit}>
+            입금하기
+          </div>
+        </div>
+        <div className="상점" onClick={goStore}>
+          상점
+        </div>
         {store ? null : (
           <Store
             moneys={moneys}

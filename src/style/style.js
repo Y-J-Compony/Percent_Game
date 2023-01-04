@@ -29,6 +29,7 @@ export const Container = styled.div`
 `;
 
 export const Life = styled.div`
+  margin-top: -15vw;
   display: flex;
   height: 15vh;
   align-items: center;
@@ -36,7 +37,7 @@ export const Life = styled.div`
   font-size: 3rem;
   font-weight: bolder;
   font-family: "Do Hyeon", sans-serif;
-  color: #82aae3;
+  color: #0a2647;
 `;
 
 /*_____________________________________________
