@@ -94,3 +94,48 @@
   justify-content: space-around;
   width: 30vw;
 }
+
+.입금박스 {
+  display: flex;
+  justify-content: space-around;
+  width: 30vw;
+}
+
+.input {
+  width: 20vw;
+  font-size: 1rem;
+  text-align: center;
+  border: solid rgb(200, 200, 200);
+  border-radius: 5px;
+}
+
+.입금하기 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #144272;
+  cursor: pointer;
+  width: 8vw;
+  height: 7vh;
+  border-radius: 5px;
+  color: white;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 1.2rem;
+}
+
+.상점 {
+  margin-top: 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #FFC93C;
+  cursor: pointer;
+  width: 29.5vw;
+  height: 6vh;
+  border-radius: 5px;
+  color: white;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 1.2rem;
+}
